@@ -1,4 +1,9 @@
 # Deep Spite - Spiteful Agents in MARL
+Existing multi-agent reinforcement learning research commonly assumes rationality of the agents. 
+While the design of the stochastic games includes cooperative, competitive and mixed settings, policy design does not consider irrational behaviour harming the agent’s own score.
+We propose a novel Nash-suboptimal learning policy, allowing the agents to be myopic regarding their objective goals. 
+We introduce the element of spite and analyse its propagation through the evolution of the environment.
+Motivated by the conceptual similarity of anti-social and adversarial behaviour, we investigate the effect of spiteful training on robustness to adversarial attacks.
 
 ## Overview
 
