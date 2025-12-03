@@ -1,0 +1,50 @@
+# --- MADDPG specific parameters ---
+
+runner: "episode"
+
+buffer_size: 50000
+# update the target network every {} episodes
+target_update_interval_or_tau: 200
+
+obs_agent_id: True
+obs_last_action: False
+obs_individual_obs: False
+
+
+# use the madddpg_learner to train
+mac: "maddpg_mac"
+reg: 0.001
+batch_size: 32
+lr: 0.0005
+use_rnn: True
+
+standardise_returns: False
+standardise_rewards: True
+
+learner: "spiteful_maddpg_learner_stage3"
+agent_output_type: "pi_logits"
+hidden_dim: 128
+critic_type: "maddpg_critic"
+name: "maddpg"
+
+spite_mode: "random"
+compromised_agent: 0
+attack_rate: 0.5
+attack_threshold: 0.5
+
+adversary_actor_learning_rate: 0.001
+adversary_critic_learning_rate: 0.002
+adversary_memory_capacity: 50000
+adversary_mu: 0.01
+adversary_gamma: 0.90
+adversary_tau: 0.01
+adversary_sigma: 0.2
+adversary_theta: 0.15
+
+discriminator_hidden_dim: 32
+discriminator_learning_rate: 0.0001
+discriminator_memory_capacity: 1000
+
+expert_run: False
+expert_index: 0
+expert_storage_path: './experts/maddpg/'
